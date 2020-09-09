@@ -680,7 +680,9 @@ public final class ImmersionBar implements ImmersionCallback {
      */
     private void updateBarConfig() {
         mBarConfig = new BarConfig(mActivity);
-        if (!mInitialized || mIsActionBarBelowLOLLIPOP) {
+        if (mBarParams.customActionBarHeight > 0) {
+            mActionBarHeight = mBarParams.customActionBarHeight;
+        } else if (!mInitialized || mIsActionBarBelowLOLLIPOP) {
             mActionBarHeight = mBarConfig.getActionBarHeight();
         }
     }
@@ -2855,6 +2857,18 @@ public final class ImmersionBar implements ImmersionCallback {
      */
     public ImmersionBar supportActionBar(boolean isSupportActionBar) {
         mBarParams.isSupportActionBar = isSupportActionBar;
+        return this;
+    }
+
+    /**
+     * 系统 actionBar 高度不符合设置要求时，设置自定义高度
+     * custom action bar immersion bar.
+     *
+     * @param height custom action bar height.
+     * @return the immersion bar
+     */
+    public ImmersionBar setCustomActionBarHeight(int height) {
+        mBarParams.customActionBarHeight = height;
         return this;
     }
 

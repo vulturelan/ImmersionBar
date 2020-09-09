@@ -174,6 +174,7 @@ public class BarParams implements Cloneable {
      * The Is support action bar.
      */
     public boolean isSupportActionBar = false;
+    public int customActionBarHeight = 0;
     /**
      * 解决软键盘与输入框冲突问题
      * The Keyboard enable.

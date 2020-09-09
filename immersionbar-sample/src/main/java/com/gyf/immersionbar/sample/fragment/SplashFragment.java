@@ -34,7 +34,7 @@ public class SplashFragment extends BaseFragment implements Observer<Long> {
 
     private static String mKey = "TotalTime";
 
-    private long mTotalTime = 3;
+    private long mTotalTime = 1;
 
     private Disposable mSubscribe;
     private OnSplashListener mOnSplashListener;
