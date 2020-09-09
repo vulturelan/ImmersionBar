@@ -85,7 +85,7 @@ class KotlinActivity : BaseKotlinActivity(R.layout.activity_params) {
 
     private val TextView.title get() = text.toString().split("   ")[0] + "   "
 
-    override fun onConfigurationChanged(newConfig: Configuration?) {
+    override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         initView()
     }
